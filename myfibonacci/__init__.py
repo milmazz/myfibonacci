@@ -29,13 +29,11 @@ def fibonacci():
 
     .. _`Fibonacci number`: http://en.wikipedia.org/wiki/Fibonacci_number
     """
-    first_seed = 0
-    second_seed = 1
+    first_seed, second_seed = 0, 1
 
     while True:
         yield second_seed
-        first_seed = second_seed
-        second_seed = first_seed + second_seed
+        first_seed, second_seed = second_seed, first_seed + second_seed
 
 if __name__ == "__main__":
     import doctest
